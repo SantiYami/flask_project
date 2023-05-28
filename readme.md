@@ -3,7 +3,9 @@
 ## Database
 
 La base de datos usada es PostgreSQL 12
-Para crear la base de datos ingrese a postgres ejecute el siguiente [archivo](db.sql), adicional .
+Para crear la base de datos ingrese a postgres ejecute el siguiente [archivo](db.sql), adicional ejecute los inserts de ejemplo.
+
+En el archivo [.env](.env) coloque las credenciales para su base de datos.
 
 Para dar inicio al proyecto use los siguientes comandos
 
