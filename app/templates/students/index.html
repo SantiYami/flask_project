@@ -1,0 +1,28 @@
+{% extends '/layout.html' %}
+{% block title %}Lista de estudiantes{% endblock %}
+
+{% block body %}
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Número de documento</th>
+        <th scope="col">Nombre completo</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Programa</th>
+        <th scope="col">Promedio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for student in students %}
+        <tr>
+            <th scope="col">{{ student.document_number }}</th>
+            <th scope="col">{{ student.nameComplete }}</th>
+            <th scope="col">{{ student.age }}</th>
+            <th scope="col">{{ student.programName if student.programName else 'Sin rpograma' }}</th>
+            <th scope="col">{{ student.average if student.average else 'Sin notas' }}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a class="btn btn-secondary" href="{{ url_for('students.form') }}">Añadir un estudiante</a>
+{% endblock %}

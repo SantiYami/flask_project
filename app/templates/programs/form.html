@@ -1,0 +1,16 @@
+{% extends '/layout.html' %}
+{% block title %}Formulario de programas{% endblock %}
+
+{% block body %}
+<form action="/programs/add" method="POST">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del programa" required>
+        <label for="name">Nombre del programa</label>
+    </div>
+    <div class="form-floating mb-3">
+        <textarea rows="3" type="text" class="form-control" id="description" name="description" placeholder="Descripción"></textarea>
+        <label for="description">Descripción</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+{% endblock %}

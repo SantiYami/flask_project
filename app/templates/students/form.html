@@ -1,0 +1,33 @@
+{% extends '/layout.html' %}
+{% block title %}Formulario de estudiantes{% endblock %}
+
+{% block body %}
+<form action="/students/add" method="POST">
+    <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="first_name" name="document_number" placeholder="Número de documento" required>
+        <label for="document_number">Número de documento</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Primer Nombre" required>
+        <label for="first_name">Primer Nombre</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="second_name" name="second_name" placeholder="Segundo Nombre">
+        <label for="second_name">Segundo Nombre</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellido" required>
+        <label for="lastname">Apellido</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" aria-describedby="emailHelp" required>
+        <label for="email">Email</label>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="date" class="form-control" id="birth_date" name="birth_date" placeholder="Fecha de nacimiento" required>
+        <label for="birth_date">Fecha de nacimiento</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends '/layout.html' %}
+{% block title %}Lista de programas{% endblock %}
+
+{% block body %}
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Número del programa</th>
+        <th scope="col">Descripcción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for program in programs %}
+        <tr>
+            <th scope="col">{{ program.name }}</th>
+            <th scope="col">{{ program.description }}</th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a class="btn btn-secondary" href="{{ url_for('programs.form') }}">Añadir un programa</a>
+{% endblock %}
